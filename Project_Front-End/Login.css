@@ -19,7 +19,16 @@ body{
     width: 1100px;
 } */
 
-.form-sign-in{
+.signin{
+    width: 500px;
+}
 
-    width: 100%;
-    margin: auto;
+.forgot-password{
+    font-weight: 500;
+    font-style: italic;
+}
+
+.login-photo{
+
+    width: 5.3rem;
+}

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,17 +12,20 @@
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
     <!-- Bootstrap CDN and external CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./Home.css">
+
+    
     <title>Dashboard</title>
 </head>
 
 <body>
+    
     <section id="main">
-        <div class="container-fluid">
+        <div class="container-fluid navbar-position">
 
-            <nav class="navbar navbar-expand-md navbar-light bg-transparent shadow-sm p-3 mb-5 bg-white rounded row">
-                <a class="navbar-brand logo" href="#">
+            <nav class="navbar navbar-expand-lg navbar-light shadow-sm p-3 mb-5 bg-white rounded row">
+                <a class="navbar-brand logo" href="Home.html">
                     Bakthi Herbal Lanka
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -52,93 +54,122 @@
                                 Help
                             </a>
                         </li>
-                        
-                    </ul>
-                    <button class="btn btn-outline-dark mr-1 btn-sign-in"
-                        style="margin-right: -20px;margin-left: 20px;"><i class="fas fa-sign-in-alt"></i> Sign
-                        In</button>
 
+                    </ul>
+                    <button class="btn btn-outline-dark mr-1 btn-sign-in" style="margin-right: -20px;margin-left: 20px;"
+                        data-toggle="modal" data-target="#exampleModal"><i class="fas fa-sign-in-alt"></i> Sign
+                        In</button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true" style="background-color:rgba(0,0,0,0.5)">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container mb-5 signin">
+                                        <div class="row justify-content-center">
+                                            <img src="./images/team.png" alt="login_image" class="login-photo">
+                                        </div>
+                                        <h2 class="text-center pt-4">
+                                            Sign In
+                                        </h2>
+
+                                        <form class="form-sign-in pt-3 pb-4"
+                                            style="width: 100%;max-width:330px;margin:0 auto;">
+                                            <div class="form-group">
+                                                <label for="formGroupUsername" class="text-center">Username</label>
+                                                <input type="text" class="form-control" id="formGroupUsernam"
+                                                    aria-describedby="" placeholder="Username">
+                                            </div>
+                                            <div class="form-group form-align">
+                                                <label for="formGroupPassword" class="">Password</label>
+                                                <input type="password" class="form-control" id="formGroupPassword"
+                                                    aria-describedby="" placeholder="Password">
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                                                <a href="#" class="ml-5" style="font-size: 15px;cursor: pointer;">forgot
+                                                    password
+                                                </a>
+                                            </div>
+                                            <div class="pt-4">
+                                                <button class="btn btn-outline-primary btn-block">SIGN IN</button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </div>
- <!--   </section>
-
-    <section id="overview">
-    -->
         <h2 class="text-center section-title pt-1">Welcome..!</h2>
         <div class="container-fluid">
+            
+
             <div class="row overview-row">
-                <div class="col-sm-12 col-md-6 col-lg-3 text-center">
-                    <button class="btn btn-outline-dark shadow p-3 mb-5 rounded btn-lg "
-                        style="height: 200px;margin-top: 50px;">
-                        <i class="fas fa-users" style="font-size: 1.7rem;"></i>
-                        <h3 class="pt-3">Employee </br> Management</h3>
-                    </button>
-                </div>
+                <a class="col-md-2 text-center btn btn-light border border-dark border border-dark feature-cards" href="EmployeeDash.html" >
+                    <img src="./images/team.png" class="image">
+                    <h3 class="overview-header">Employee Management</h3>
+                    <p class="info-width mx-auto">Employee Management</p>
+                </a>
 
+                <a class="col-md-2 text-center btn btn-light border border-dark feature-cards">
+                    <img src="./images/delivery-truck.png" class="image">
+                    <h3 class="overview-header">Distribution Management</h3>
+                    <p class="info-width mx-auto">Distribution Management</p>
+                </a>
 
-                <div class="col-sm-12 col-md-6 col-lg-3 text-center">
-                    <button class="btn btn-outline-dark btn-lg shadow p-3 mb-5 rounded"
-                        style="height: 200px;margin-top: 50px;">
-                        <i class="fas fa-shipping-fast" style="font-size: 1.7rem;"></i>
-                        <h3 class="pt-3">Distribution </br> Management</h3>
-                    </button>
-                </div>
+                <a class="col-md-2 text-center btn btn-light border border-dark feature-cards">
+                    <img src="./images/supplies.png" class="image" style="width: 100px;">
+                    <h3 class="overview-header">Supplier Management</h3>
+                    <p class="info-width mx-auto">Supplier Management</p>
+                </a>
 
+                <a class="col-md-2 text-center btn btn-light border border-dark feature-cards">
+                    <img src="./images/warehouse.png" class="image">
+                    <h3 class="overview-header">Inventory Management</h3>
+                    <p class="info-width mx-auto">Inventory Management</p>
+                </a>
 
-                <div class="col-sm-12 col-md-6 col-lg-3 text-center">
-                    <button class="btn btn-outline-dark btn-lg shadow p-3 mb-5 rounded"
-                        style="height: 200px;margin-top: 50px;">
-                        <i class="fas fa-file-invoice" style="font-size: 1.7rem;"></i>
-                        <h3 class="pt-3">Supplier </br> Management</h3>
-                    </button>
-                </div>
+                <a class="col-md-2 text-center btn btn-light border border-dark feature-cards">
+                    <img src="./images/Salary.jpg" class="image" style="width: 100px;">
+                    <h3 class="overview-header">Salary Management</h3>
+                    <p class="info-width mx-auto">Salary Management</p>
+                </a>
 
-                <div class="col-sm-12 col-md-6 col-lg-3 text-center">
-                    <button class="btn btn-outline-dark btn-lg shadow p-3 mb-5 rounded"
-                        style="height: 200px;margin-top: 50px;">
-                        <i class="fas fa-money-bill-wave" style="font-size: 1.7rem;"></i>
-                        <h3 class="pt-3">Salary </br> Management</h3>
-                    </button>
-                </div>
+                <a class="col-md-2 text-center btn btn-light border border-dark feature-cards">
+                    <img src="./images/investment.png" class="image">
+                    <h3 class="overview-header">Financial Management</h3>
+                    <p class="info-width mx-auto">Financial Management</p>
+                </a>
 
-                <div class="col-sm-12 col-md-6 col-lg-3  text-center">
-                    <button class="btn btn-outline-dark btn-lg shadow p-3 mb-5 rounded"
-                        style="height: 200px;margin-top: 50px;">
-                        <i class="fas fa-warehouse" style="font-size: 1.7rem;"></i>
-                        <h3 class="pt-3">Inventory </br> Management</h3>
-                    </button>
-                </div>
+                
+                <a class="col-md-2 text-center btn btn-light border border-dark feature-cards">
+                    <img src="./images/invoice.png" class="image">
+                    <h3 class="overview-header">Direct Purchasing </h3>
+                    <p class="info-width mx-auto">Direct Purchasing </p>
+                </a>
 
-
-                <div class="col-sm-12 col-md-6 col-lg-3 text-center">
-                    <button class="btn btn-outline-dark btn-lg shadow p-3 mb-5 rounded"
-                        style="height: 200px;margin-top: 50px;">
-                        <i class="fas fa-file-invoice-dollar" style="font-size: 1.7rem;"></i>
-                        <h3 class="pt-3">Account </br> Management</h3>
-                    </button>
-                </div>
-
-
-                <div class="col-sm-12 col-md-6 col-lg-3 text-center">
-                    <button class="btn btn-outline-dark btn-lg shadow p-3 mb-5 rounded"
-                        style="height: 200px;margin-top: 50px;">
-                        <i class="fas fa-ad" style="font-size: 1.7rem;"></i>
-                        <h3 class="pt-3">Marketing </br> Management</h3>
-                    </button>
-                </div>
-
-                <div class="col-sm-12 col-md-6 col-lg-3 text-center">
-                    <button class="btn btn-outline-dark btn-lg shadow p-3 mb-5 rounded"
-                        style="height: 200px;margin-top: 50px;">
-                        <i class="fas fa-toolbox" style="font-size: 1.7rem;"></i>
-                        <h3 class="pt-3">Maintainance </br> Management</h3>
-                    </button>
-                </div>
+                
+                <a class="col-md-2 text-center btn btn-light border border-dark feature-cards">
+                    <img src="./images/settings.png" class="image">
+                    <h3 class="overview-header">Maintainance Management</h3>
+                    <p class="info-width mx-auto">Maintainance Management</p>
+                </a>
             </div>
 
         </div>
     </section>
+   
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -151,7 +182,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-        <h1>Hello</h1>
+        <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a> from <a href="https://www.flaticon.com/"                 title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
 </body>
 
 </html>

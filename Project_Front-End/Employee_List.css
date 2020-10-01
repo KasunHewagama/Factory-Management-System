@@ -1,14 +1,94 @@
-body{
+body {
     font-family: "Montserrat", sans-serif;
-    font-size: 1.0rem;
+    font-size: 0.9rem;
 }
 
-.logo{
+.logo {
     font-weight: 900;
     font-size: 1.5rem;    
+    font-family: "Montserrat", sans-serif;
 }
- 
-.nav-item{
+
+.nav-item {
     margin: 0 20px;
     cursor: pointer;
+    font-family: "Montserrat", sans-serif;
 }
+
+
+.name {
+    font-weight: 500;
+}
+
+.toggle-bar {
+    margin-top: -50px;
+}
+
+.sidebar-hr {
+    border-top: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+#sidebarToggle::after {
+    font-weight: 900;
+    content: '\f104';
+    font-family: 'Font Awesome 5 Free';
+    margin-right: .1rem;
+}
+
+.wrapper{
+    position: fixed;
+    margin-bottom: 40px;
+}
+
+label{
+    color: #2581EA;
+}
+
+  .search, .search-text{
+
+    height: 40px;
+    margin-top: 10px;
+  }
+
+  .search-area{
+
+    background-color: white;
+    height: 60px;
+    
+    
+  }
+
+  #content{
+    margin-bottom: 60px;
+    /* background-color: #E2E6EA; */
+  }
+
+  .add-btn{
+      height: 40px;
+      width: 110px;
+      margin-right: 20px;
+      background-color: #17A2B8;
+      color: white;
+  }
+
+  .my-custom-scrollbar {
+    position: relative;
+    height: 200px;
+    overflow: auto;
+    }
+    .table-wrapper-scroll-y {
+    display: block;
+    }
+
+    .registration-modal{
+
+        margin-right: 850px;
+    }
+
+    .table-img{
+
+        width:40px;
+        margin-left: 20px;
+    }
+
+    

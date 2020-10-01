@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Querys>
+<!-- EMPLOYEE BEGIN -->
+<query id="insert_employee">
+        <![CDATA[
+          	insert into employee (empId, image, fname, lname, gender, email, contactNo, address, unit, designation, empType) 
+          	values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ]]>
+	</query>
+
+	<query id="remove_employee">
+         <![CDATA[        
+            delete from employee where employee.empId = ?
+        ]]>
+	</query>
+
+ 	<query id="employee_ids">
+         <![CDATA[        
+            select e.empId from employee as e
+        ]]>
+	</query>
+
+	<query id="employee_by_id">
+         <![CDATA[        
+            select * from employee where employee.empId = ?
+        ]]>
+	</query>
+	
+	<query id="all_employees">
+         <![CDATA[        
+            select * from employee
+        ]]>
+	</query>
+
+<query id="update_employees">
+         <![CDATA[        
+            update employee as e 
+            set e.image = ?, e.fname = ?, e.lname = ?, e.email = ?, e.contactNo = ?, e.unit = ?, e.designation = ?  
+            where e.empId = ?
+        ]]>
+	</query>
+<!-- EMPLOYEE END -->
+
+<!-- LOGIN BEGIN -->
+
+	<query id="insert_login_creds">
+        <![CDATA[
+          	insert into login (loginId, image, fname, lname, designation, username, password) 
+          	values (?, ?, ?, ?, ?, ?, ?)
+        ]]>
+	</query>
+
+	<query id="login_ids">
+         <![CDATA[        
+            select l.loginId from login as l
+        ]]>
+	</query>
+	
+		<query id="remove_login">
+         <![CDATA[        
+            delete from login where login.loginId = ?
+        ]]>
+	</query>
+
+	<query id="all_logins">
+         <![CDATA[        
+            select * from login
+        ]]>
+	</query>
+	
+	<query id="update_logins">
+         <![CDATA[        
+            update login as l
+            set l.username = ?, l.password = ?
+            where l.loginId = ?
+        ]]>
+	</query>
+	
+<!-- LOGIN END -->
+
+<!--SUPPLIER BEGIN -->
+
+	<!-- Select all supplier Query -->
+	<query id="insert_supplier">
+        <![CDATA[
+          	insert into supplier (supID, supName, telNo, email, address, proId) 
+          	values (?, ?, ?, ?, ?, ?)
+        ]]>
+	</query>
+
+	<!-- Select a particular supplier by id Query -->
+	<query id="supplier_by_id">
+         <![CDATA[        
+            select * from supplier where supplier.supID = ?
+        ]]>
+	</query>
+
+	<!-- Select all suppliers -->
+	<query id="all_suppliers">
+         <![CDATA[        
+            select * from supplier
+        ]]>
+	</query>
+
+	<!-- Delete a particular supplier by id Query -->
+	<query id="remove_supplier">
+         <![CDATA[        
+            delete from supplier where supplier.supID = ?
+        ]]>
+	</query>
+	
+	<!-- Update a particular supplier by id Query -->
+	<query id="update_supplier">
+         <![CDATA[        
+            update supplier as s 
+            set s.supName = ?, s.telNo = ?, s.email = ?, s.address = ?, s.proId = ?
+            where s.supID = ?
+        ]]>
+	</query>
+	
+		<!-- Get supplier IDs Query -->
+	<query id="supplier_ids">
+         <![CDATA[        
+            select s.supID from supplier as s
+            
+        ]]>
+	</query>
+<!-- SUPPLIER END -->
+
+
+<!-- Raw Material BEGIN -->
+
+	<!-- insert raw-material Query -->
+	<query id="insert_rawMaterial">
+        <![CDATA[
+          	insert into raw_material (rID, rName, rDescription, storeID, uPrice, status) 
+          	values (?, ?, ?, ?, ?, ?)
+        ]]>
+	</query>
+
+	<!-- Select a particular raw-material by id Query -->
+	<query id="rawMaterial_by_id">
+         <![CDATA[        
+            select * from raw_material where raw_material.rID = ?
+        ]]>
+	</query>
+
+	<!-- Select all raw materials -->
+	<query id="all_rawMaterials">
+         <![CDATA[        
+            select * from raw_material
+        ]]>
+	</query>
+
+	<!-- Delete a particular raw materials by id Query -->
+	<query id="remove_rawMaterial">
+         <![CDATA[        
+            delete from raw_material where raw_material.rID = ?
+        ]]>
+	</query>
+	
+	<!-- Update a particular raw material by id Query -->
+	<query id="update_rawMaterial">
+         <![CDATA[        
+            update raw_material as rm 
+            set rm.rName = ?, rm.rDescription = ?, rm.storeID = ?, rm.uPrice = ?, rm.status = ? 
+            where rm.rID = ?
+        ]]>
+	</query>
+	
+		<!-- Get raw material IDs Query -->
+	<query id="rawMaterial_ids">
+         <![CDATA[        
+            select rm.rID from raw_material as rm
+            
+        ]]>
+	</query>
+<!-- Raw Material END -->
+
+<!-- LEAVE BEGIN -->
+
+<query id="insert_leave">
+        <![CDATA[
+          	insert into leaves (leaveId, empId, empName, date, description) 
+          	values (?, ?, ?, ?, ?)
+        ]]>
+	</query>
+<!-- LEAVE END -->
+
+</Querys>
+
+

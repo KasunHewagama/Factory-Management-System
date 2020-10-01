@@ -1,0 +1,50 @@
+body{
+   font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    
+}
+
+input, select{
+    width: 100%;
+   
+    /* border: none;
+    border-bottom: 2px solid #ebebeb; */
+    padding: 2px 0;
+    color: #222;
+    margin-bottom: 10px;
+   
+}
+
+label{
+    font-weight: 400;
+}
+input::after{
+    border: none;
+    border-bottom: 2px solid blue;
+}
+
+.form-control-test{
+
+        display: block;
+        border: 0;
+        outline: none;
+        border-bottom: 3px solid #ebebeb;
+        line-height: 16px;
+        font-size: 15px;
+        box-sizing: border-box;
+        background-clip: padding-box;
+        width: 100%;
+        padding: .35rem 0 .55rem;
+        border-radius: 0;
+        background: #fff;
+        -webkit-transition: border-color .15s;
+        transition: border-color .15s;
+    }
+    
+ .form-control-test:focus{
+    border-bottom-color: #6db33f;
+ }   
+    
+    
+    
+    
